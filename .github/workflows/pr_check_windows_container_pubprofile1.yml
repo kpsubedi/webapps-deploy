@@ -1,16 +1,17 @@
 name: pr_check_windows_container_publishprofile
 
 on:
-  push:
-    branches:
-      - master
-      - releases/*
-    paths-ignore:
-      - '**.md'
-  pull_request_target:
-    branches:
-      - master
-      - 'releases/*'
+ workflow_dispatch:   
+    push:
+      branches:
+        - master
+        - releases/*
+      paths-ignore:
+        - '**.md'
+    pull_request_target:
+      branches:
+        - master
+        - 'releases/*'
 
 env:
   AZURE_WEBAPP_NAME: wincontainerswebapp  # set this to your application's name
