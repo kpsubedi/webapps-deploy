@@ -30,6 +30,8 @@ jobs:
         repository: GH-ACE/python_container_App
         ref: main
         path: 'python_container_App'
+        run:
+         python -c 'print("test")'
 
     - name: Azure authentication
       uses: azure/login@v1
